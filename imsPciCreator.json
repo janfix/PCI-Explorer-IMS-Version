@@ -1,0 +1,71 @@
+{
+    "model": "IMSPCI",
+    "typeIdentifier": "exploPCI",
+    "label": "Explorateur de Fichiers",
+    "short": "Explorer",
+    "description": "Simultation d'explorateur Système de Fichiers",
+    "version": "1.0.0",
+    "author": "Jean-Philippe Rivière",
+    "email": "jean.philippe.riviere@gmail.com",
+    "tags": [
+        "technologies", "Explorateur de Fichiers"
+    ],
+    "response": {
+        "baseType": "string",
+        "cardinality": "single"
+    },
+    "runtime": {
+        "hook": "./interaction/runtime/js/exploInteraction.min.js",
+        "modules": {
+            "exploPCI/interaction/runtime/js/exploInteraction.min": [
+                "interaction/runtime/js/exploInteraction.min.js"
+            ]
+        },
+        "src": [
+            "./interaction/runtime/js/exploInteraction.js",
+            "./interaction/runtime/js/renderer.js",
+            "./interaction/runtime/js/assets.js",
+            "./interaction/runtime/js/defaultConfig.js",
+            "./interaction/runtime/js/lib/bootstrap.js",
+            "./interaction/runtime/js/lib/datatables.js",
+            "./interaction/runtime/js/labo/topMenu.js",
+            "./interaction/runtime/js/labo/pathLine.js",
+            "./interaction/runtime/js/labo/shortCuts.js",
+            "./interaction/runtime/js/labo/com_rename.js",
+            "./interaction/runtime/js/labo/com_new.js",
+            "./interaction/runtime/js/labo/com_open.js",
+            "./interaction/runtime/js/labo/com_copy.js",
+            "./interaction/runtime/js/labo/com_paste.js",
+            "./interaction/runtime/js/labo/verifDbl.js",
+            "./interaction/runtime/js/labo/com_cut.js",
+            "./interaction/runtime/js/labo/dnd.js",
+            "./interaction/runtime/js/labo/eventTracker.js",
+            "./interaction/runtime/js/labo/com_format.js",
+            "./interaction/runtime/js/labo/com_trash.js",
+            "./interaction/runtime/js/labo/com_prop.js",
+            "./interaction/runtime/js/labo/util.js",
+            "./interaction/runtime/js/labo/free.js",
+            "./interaction/runtime/js/labo/search.js",
+            "./interaction/runtime/js/core/CMenuList.js",
+            "./interaction/runtime/js/core/displayDirContent.js",
+            "./interaction/runtime/js/core/table.js",
+            "./interaction/runtime/js/core/tree.js"
+        ],
+        "stylesheets": [
+            "./interaction/runtime/css/explorer.css"
+        ]
+    },
+    "creator": {
+        "icon": "./interaction/creator/img/icon.svg",
+        "hook": "./imsPciCreator.min.js",
+        "src": [
+            "./imsPciCreator.js",
+            "./interaction/creator/tpl/markup.tpl",
+            "./interaction/creator/tpl/propertiesForm.tpl",
+            "./interaction/creator/widget/Widget.js",
+            "./interaction/creator/widget/states/states.js",
+            "./interaction/creator/widget/states/Question.js",
+            "./interaction/creator/widget/states/Answer.js"
+        ]
+    }
+}
