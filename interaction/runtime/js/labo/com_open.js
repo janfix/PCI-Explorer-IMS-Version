@@ -87,7 +87,7 @@ define(['exploPCI/interaction/runtime/js/lib/datatables',
                     $container.find(".contentModalApp").addClass("imageAppContainer");
                     var editorID = '_' + Math.random().toString(36).substr(2, 9);
                     $container.find(".contentModalApp").html("<textarea class='richContent' cols='300' id=" + editorID + ">" + content + "</textarea><img class='waitIcon' src= " + assets.Loading_icon + ">");
-                    $('.richContent').richText();
+                    $container.find('.richContent').richText();
                     $container.find('.richText-toolbar').hide();
                     $container.find('.richText').prepend('<div class="fakeToolBar"></div>')
                     $container.find('.nicEdit-panelContain').parent().width('100%');

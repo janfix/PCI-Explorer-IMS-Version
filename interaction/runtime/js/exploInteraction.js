@@ -46,6 +46,7 @@ define([
          */
         getInstance: function getInstance(dom, config, state) {
             var response = config.boundTo;
+            console.log(response)
 
             /*  this.$ = $;
              console.log(this.$)
@@ -94,12 +95,17 @@ define([
          * @returns {Object}
          */
         getResponse: function() {
-
+            console.log(this.dom)
+                        
+            // Prouve independance des traitements : value = "REPONSES" + " " + $container.find(".explo").attr("data-id") ;
+            //Donc le cumul des datas à lieu dans les variables ????
+            //'{"FolderTree" : ' + $container.find('.dataTree').html()+'}' ;
             var $container = $(this.dom),
-                value = '{"FolderTree" : ' + $container.find('.dataTree').html() +
+                value = 
+               '{"FolderTree" : ' + $container.find('.dataTree').html() +
                 ',"FileList" : ' + $container.find('.dataFiles').html() +
                 ',"ClipBoard" : ' + $container.find('.dataClipBoard').html() +
-                ',"Actions" : [' + $container.find('.dataActions').html() + ']}';
+                ',"Actions" : [' + $container.find('.dataActions').html() + ']}'; 
 
             return { base: { string: value } };
         },
@@ -201,7 +207,7 @@ define([
 
             var $container = $(this.dom);
 
-            $container.find('input').prop('checked', false);
+            $container.find('input').prop('checked', false);// ??????????????????
         },
 
         /**

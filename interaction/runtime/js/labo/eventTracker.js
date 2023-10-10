@@ -11,7 +11,7 @@ This project use open source libraries : jstree, datatable, font-awesome, jQuery
  */
 
 define([], function () {
-    var eventCollector = [];
+    
 
     /** Collect event for TAO answering system - 
      * @param {string} evName - Event name
@@ -77,6 +77,8 @@ define([], function () {
      
      */
 
+   
+
     function evCollector($container, evName, var1, var2, var3) {
         //console.log("EVENT ACT")
         //var evString = "{" + evName + ":{" + var1 + "," + var2 + "} }";
@@ -85,8 +87,10 @@ define([], function () {
         if(var1 =="-" && var2 =="-" ){
             //console.log("Parasite Event")
         }else {
-        eventCollector.push(evString);
-        $container.find(".dataActions").html(eventCollector.join(","));
+        console.log(evString)
+        $container.eventCollector.push(evString);
+        console.log($container.eventCollector)
+        $container.find(".dataActions").html($container.eventCollector.join(","));
         }
        
     }

@@ -32,7 +32,14 @@ define([
         function renderExplo(id, $container, config, assetManager) {
 
             var UNIQEXPLO = Date.now();
-            $container.find(".explo").attr("data-id", UNIQEXPLO).addClass(UNIQEXPLO);
+            console.log(typeof UNIQEXPLO)
+            var UEX = UNIQEXPLO.toString()
+            $container.eventCollector = [];
+          
+
+            $container.find(".explo").attr("data-id", UNIQEXPLO);
+            $container.find(".explo").addClass(UEX);
+            console.log(UNIQEXPLO);
             topMenu.init($container);
             $container.find(".dropdown-toggle").dropdown();
 
