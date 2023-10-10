@@ -52,10 +52,7 @@
             "./interaction/runtime/js/core/tree.js"
         ],
         "stylesheets": [
-            "./interaction/runtime/css/bootstrap.css",
-            "./interaction/runtime/css/explorer.css",
-            "./interaction/runtime/css/jsTreeStyle.css",
-            "./interaction/runtime/css/datatables.css"
+            "./interaction/runtime/css/explorer.css"
         ]
     },
     "creator": {
